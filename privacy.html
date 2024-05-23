@@ -9,19 +9,17 @@
 
     <script defer="" src="./cdn.min.js" integrity="sha256-ygV4Me+b49juR+FAeAif0jgdx4ILS7f724WkkPW49ow=" crossorigin="anonymous"></script>
     <script src="./bignumber.min.js" integrity="sha256-49ctKRM8TRNIHCKvolXWckgcFK9C4pxhbHKTC+qJ28c=" crossorigin="anonymous"></script>
-    <script>
-      // theme initialization
-      ;(function () {
-        const isDark =
-          localStorage.getItem("darkMode") === "true" ||
-        (!localStorage.getItem("darkMode") && window.matchMedia("(prefers-color-scheme: dark)").matches)
-        if (isDark) {
-          document.documentElement.classList.add("dark")
-        }
-      })()
+<script>
+  // theme initialization
+  ;(function () {
+    const isDark = false; // Always set isDark to false
+    if (isDark) {
+      document.documentElement.classList.add("dark")
+    }
+  })()
 
-      BigNumber.config({ DECIMAL_PLACES: 8 })
-    </script>
+  BigNumber.config({ DECIMAL_PLACES: 8 })
+</script>
     <style>
       @font-face {
         font-family: "Montserrat";

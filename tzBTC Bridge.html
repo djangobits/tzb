@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)https://tzbtc-v2-backend.prod.gke.papers.tech/maintenance/ -->
+<html lang="en"><script src="chrome-extension://jnlgamecbpmbajjfhmmmlhejkemejdma/static/js/inpage.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>tzBTC Bridge</title>
+    <!--<base href="/">--><base href=".">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="data:image/png;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9Ijg5OS40MTAyIiBoZWlnaHQ9Ijg5OS40MTAyIiB2aWV3Qm94PSIwIDAgODk5LjQxMDIgODk5LjQxMDIiPjxkZWZzPjxzdHlsZT4uantmaWxsOiMxNDU5ZmY7fS5qLC5rLC5se3N0cm9rZS13aWR0aDowcHg7fS5re2ZpbGw6IzJjN2RmNzt9Lmx7ZmlsbDojZmZmO308L3N0eWxlPjwvZGVmcz48ZyBpZD0iYyI+PHBhdGggY2xhc3M9ImoiIGQ9Ik04NjQuMDYzNSwyNzQuNjU1M2MtMjIuNjUwNC01My41NTIyLTU1LjA3MzctMTAxLjY0NDUtOTYuMzY5MS0xNDIuOTM5NS00MS4yOTU0LTQxLjI5NTQtODkuMzg3Mi03My43MTkyLTE0Mi45Mzk1LTk2LjM2OTZDNTY5LjMwMzcsMTEuODkyMSw1MTAuNDA4MiwwLDQ0OS43MDUxLDBzLTExOS41OTg2LDExLjg5MjEtMTc1LjA1MDMsMzUuMzQ2MmMtNTMuNTUyMiwyMi42NTA0LTEwMS42NDQsNTUuMDc0Mi0xNDIuOTM5NSw5Ni4zNjk2LTQxLjI5NTQsNDEuMjk0OS03My43MTg4LDg5LjM4NzItOTYuMzY5NiwxNDIuOTM5NUMxMS44OTE2LDMzMC4xMDY0LDAsMzg5LjAwMiwwLDQ0OS43MDUxczExLjg5MTYsMTE5LjU5ODYsMzUuMzQ1NywxNzUuMDUwM2MyMi42NTA0LDUzLjU1MjIsNTUuMDc0MiwxMDEuNjQ0LDk2LjM2OTYsMTQyLjkzOTVzODkuMzg3Miw3My43MTg4LDE0Mi45Mzk1LDk2LjM2OTZjNTUuNDUxNywyMy40NTM2LDExNC4zNDY3LDM1LjM0NTcsMTc1LjA1MDMsMzUuMzQ1N3MxMTkuNTk4Ni0xMS44OTIxLDE3NS4wNDk4LTM1LjM0NTdjNTMuNTUyMi0yMi42NTA5LDEwMS42NDQtNTUuMDc0MiwxNDIuOTM5NS05Ni4zNjk2czczLjcxODgtODkuMzg3Miw5Ni4zNjkxLTE0Mi45Mzk1YzIzLjQ1NDEtNTUuNDUxNywzNS4zNDY3LTExNC4zNDY3LDM1LjM0NjctMTc1LjA1MDNzLTExLjg5MjYtMTE5LjU5ODYtMzUuMzQ2Ny0xNzUuMDQ5OFoiLz48L2c+PGcgaWQ9ImkiPjxwYXRoIGNsYXNzPSJrIiBkPSJNNDExLjA4MzYsNjM3LjY5NTN2LjI1Yy0uMjgtLjA4MDEtLjU2MDEtLjE2MDItLjg0MDEtLjI1aC44NDAxWiIvPjxwYXRoIGNsYXNzPSJrIiBkPSJNNDExLjI5MzYsNjM3LjY5NTN2LjMxOThjLS4wNzAxLS4wMi0uMTQwMS0uMDQtLjIxLS4wNjk4LS4yOC0uMDgwMS0uNTYwMS0uMTYwMi0uODQwMS0uMjVoMS4wNVoiLz48cGF0aCBjbGFzcz0iayIgZD0iTTQxMS4yOTM2LDYzNy42OTUzdi4zMTk4Yy0uMDcwMS0uMDItLjE0MDEtLjA0LS4yMS0uMDY5OC0uMjgtLjA4MDEtLjU2MDEtLjE2MDItLjg0MDEtLjI1aDEuMDVaIi8+PHBhdGggY2xhc3M9ImsiIGQ9Ik00NTQuNTMzNiw2MzguMTc1M3Y1LjQzMDJjLS4wNC4wMDk4LS4wOTAxLjAwOTgtLjEzMDEuMDA5OHYtNS40Mzk5aC4xMzAxWiIvPjxwYXRoIGNsYXNzPSJsIiBkPSJNNDExLjI5MzYsNjM2LjM2NTJ2MTE1Ljg3OTloLTU2LjY4OTl2LTU3Ljk0NDRoLTkxLjAydi01Ny45MzU1czE0Ny42Mzk5LS4wMiwxNDcuNzEsMFoiLz48cGF0aCBjbGFzcz0ibCIgZD0iTTY2My44MTU3LDU5OS4wODVjLTI2Ljk2LDYyLjQ3MDItOTQuODQwMSw5My42NDAxLTE1OS41ODAxLDk2LjkzMDItMy4xMzk5LjIzLTYuNTc5OC4zNTAxLTEwLjEzOTkuMzk5OXY1My43MWgtNTYuNzAwMmwuMTMwMS0xMTEuOTQ5N3YtMS44MTAxYzM0Ljg4MzcsMCw1Ni41NS0uNjQ5OSw2Mi4yMS0xLjI1LDU5LjM3MDEtNC43ODAzLDExNC41NjAxLTQyLjA0OTgsMTA3LjIxLTEwNy42MDAxLTIuNTM5OC0yMi45NzAyLTEyLjUzLTQ3LjQwOTctMzEuMTc5OS02Mi4zNTAxLTI0LjE3OTktMjAuMzg5Ni02Mi45Ni0yNS43MS05NC44OTk5LTIzLjU1OTZsLTEuMjAwMi4wODk4aC0uMDA5OGwtMjAuNDIwMi01My41ODk4LDEwMS40MjAyLTkyLjU5MDNoLTE3MC44NzAxdjE5Ni40NTAyYzAsMjQuMjU5OCwxOS43Myw0My45ODk3LDQzLjk4LDQzLjk4OTcsMTIuODUwMSwwLDI0LjI1LTMuNzU5OCwzMi43Ni0xMC40ODk3bDIzLjYzMDEsNjEuOThjLTE2LjcxMDIsOC44Mzk4LTM2LDEzLjY5OTctNTYuMzkwMSwxMy42OTk3LTYwLjIsMC0xMDkuMTc5OS00OC45OC0xMDkuMTc5OS0xMDkuMTc5N3YtMTk2LjQ1MDJoLTc4LjAxdi01Ni42ODk5aDgyLjI2di05MS42NjAyaDU2Ljd2OTEuNjYwMmg1MS43MnYtOTEuNjYwMmg1Ni42ODk5djkxLjY2MDJoMTM5LjhsMTkuMTEwMSw0OS4yODAzLTEwOS45NDAyLDEwMC4zNjk2YzExLjg2MDEsMS41NjAxLDIzLjU4MDEsNC4yMywzNC45OCw4LjE2MDIsMzIuNDYwMiwxMC44OTAxLDYyLjY3MDIsMzQuMTgwMiw3OC4xMDAxLDY1LjA0OTgsMjEuMDYwMSw0MS44ODA0LDI3LjE4OTksOTMuMzkwMSw3LjgyMDEsMTM3LjM5OTlaIi8+PC9nPjwvc3ZnPg==">
+
+    <script defer="" src="./tzBTC Bridge_files/cdn.min.js" integrity="sha256-ygV4Me+b49juR+FAeAif0jgdx4ILS7f724WkkPW49ow=" crossorigin="anonymous"></script>
+    <script src="./tzBTC Bridge_files/bignumber.min.js" integrity="sha256-49ctKRM8TRNIHCKvolXWckgcFK9C4pxhbHKTC+qJ28c=" crossorigin="anonymous"></script>
+    <script>
+      // theme initialization
+      ;(function () {
+        const isDark =
+          localStorage.getItem("darkMode") === "true" ||
+        (!localStorage.getItem("darkMode") && window.matchMedia("(prefers-color-scheme: dark)").matches)
+        if (isDark) {
+          document.documentElement.classList.add("dark")
+        }
+      })()
+
+      BigNumber.config({ DECIMAL_PLACES: 8 })
+    </script>
+    <style>
+      @font-face {
+        font-family: "Montserrat";
+        src: URL("/static/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+      }
+
+      @font-face {
+        font-family: 'tafilmfictionsemix';
+        src: url('/static/fonts/tafilmfictionsemix-semilight-webfont.woff2') format('woff2'),
+             url('/static/fonts/tafilmfictionsemix-semilight-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'tafilmfictionsemix';
+        src: url('/static/fonts/tafilmfictionsemix-extrabold-webfont.woff2') format('woff2'),
+             url('/static/fonts/tafilmfictionsemix-extrabold-webfont.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+      }
+    </style>
+    
+
+<link rel="preload" href="./tzBTC Bridge_files/styles.css" as="style">
+ 
+
+<link rel="stylesheet" href="./tzBTC Bridge_files/styles.css">
+
+
+
+
+  <style id="HighlightThisStyles">.ht3c3642df-0b59-498e-982a-59f93fd968ce {
+background-color: #FF75D6 !important;
+-webkit-print-color-adjust:exact !important;
+font-style: inherit;
+box-shadow: rgb(229, 229, 229) 1px 1px !important;
+border-radius: 3px !important;
+padding: 1px !important;
+}
+.ht4e1c9b8b-a09b-41ea-82c1-e6ef1ad3c4f7 {
+background-color: #FF0000 !important;
+-webkit-print-color-adjust:exact !important;
+font-style: inherit;
+box-shadow: rgb(229, 229, 229) 1px 1px !important;
+border-radius: 3px !important;
+padding: 1px !important;
+}
+.ht516759fb-b5c2-4e0b-94a8-2e0ab3d2aae8 {
+color: #FFFFFF !important;
+background-color: #0000CD !important;
+-webkit-print-color-adjust:exact !important;
+font-style: inherit;
+box-shadow: rgb(229, 229, 229) 1px 1px !important;
+border-radius: 3px !important;
+padding: 1px !important;
+}
+.ht545c29b0-4d27-453f-a451-17aa7dbe9779 {
+background-color: #32CD32 !important;
+-webkit-print-color-adjust:exact !important;
+font-style: inherit;
+box-shadow: rgb(229, 229, 229) 1px 1px !important;
+border-radius: 3px !important;
+padding: 1px !important;
+}
+.ht5adbdedc-9fe2-4a5a-ad6c-d90215432f00 {
+background-color: #33E4FF !important;
+-webkit-print-color-adjust:exact !important;
+font-style: inherit;
+box-shadow: rgb(229, 229, 229) 1px 1px !important;
+border-radius: 3px !important;
+padding: 1px !important;
+}
+.hta1cb289e-ee6b-4734-b2b9-f02e3f2bb671 {
+color: #000000 !important;
+background-color: #1E90FF !important;
+-webkit-print-color-adjust:exact !important;
+font-style: inherit;
+box-shadow: rgb(229, 229, 229) 1px 1px !important;
+border-radius: 3px !important;
+padding: 1px !important;
+}
+.htb8d0197e-ed91-4c06-bd17-6369100cdc5c {
+background-color: #1AFF00 !important;
+-webkit-print-color-adjust:exact !important;
+font-style: inherit;
+box-shadow: rgb(229, 229, 229) 1px 1px !important;
+border-radius: 3px !important;
+padding: 1px !important;
+}
+.htd96777d9-d1f9-494f-93fd-882fc7357d7a {
+background-color: #FF8C00 !important;
+-webkit-print-color-adjust:exact !important;
+font-style: inherit;
+box-shadow: rgb(229, 229, 229) 1px 1px !important;
+border-radius: 3px !important;
+padding: 1px !important;
+}
+</style><script src="chrome-extension://idnnbdplmphpflfnlkomgpfbpcgelopg/inpage.js" id="xverse-wallet-provider" data-is-priority="true"></script></head>
+  <body class="flex flex-col justify-between h-screen bg-zinc-50 dark:bg-zinc-900 dark:text-white" x-data="globalUtils()" x-init="init()">
+    <script src="chrome-extension://ldinpeekobnhjjdofggfgjlcehhmanlj/inpage.js" id="leather-provider"></script><header class="flex justify-between p-4">
+      <a href="https://tzbtc-v2-backend.prod.gke.papers.tech/verification/init/" class="flex items-center gap-4">
+        <template x-if="!isDark"></template><img src="./tzBTC Bridge_files/tzBTC-Logo-Dark.svg" alt="tzBTC" class="h-12 lg:h-16">
+        <template x-if="isDark"></template>
+        <div class="flex flex-wrap gap-2">
+          
+        </div>
+      </a>
+    
+    <div class="flex items-center justify-end lg:items-start">
+      <div class="flex items-center gap-2 lg:gap-4">
+        
+        
+          <!-- <a href="" class="btn-solid btn-sm" >LOGIN</a> -->
+        
+        <div class="flex items-start">
+          <button @click="toggleDarkMode()" aria-label="Toggle Dark Mode" class="btn-icon">
+            <template x-if="!isDark"></template><svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" width="24" height="24" id="moonIcon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"></path>
+</svg>
+            <template x-if="isDark"></template>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="flex flex-col justify-center gap-2 lg:gap-8 grow">
+    <main class="flex flex-col items-center justify-center h-full gap-1 xl:gap-4">
+      <div class="flex justify-center ">
+            <!-- messages -->
+        
+            <!-- end of messages -->
+      </div>
+       
+  <div class="flex flex-col items-center w-full max-w-sm gap-4 p-2 sm:p-0">
+    <svg fill="none" viewBox="0 0 24 24" stroke-width="{1.5}" stroke="currentColor" aria-hidden="true" width="24" height="24" class="text-amber-500 size-32">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z"></path>
+</svg>
+    <h1 class="mb-4 text-4xl font-bold text-center text-amber-500">Our site is currently down for maintenance</h1>
+    <p class="text-base text-left ">
+      We are working to improve your experience. In urgent cases reach out to <a href="mailto:tzbtc@lexr.com" class="font-semibold underline">tzbtc@lexr.com</a>. Thank you!
+    </p>
+  </div>
+ 
+    </main>
+  </div>
+  <footer class="flex flex-col-reverse h-24 mt-24">
+    <div class="flex flex-wrap items-center justify-center gap-5 px-6 py-4 text-lg sm:gap-8 footer text-neutral-content text-muted">
+      <a class="text-sm link" href="https://tzbtc.io/">tzBTC.io</a>
+      <a class="text-sm link" href="https://tzbtc-v2-backend.prod.gke.papers.tech/terms-and-conditions/">Terms and Conditions</a>
+      <a class="text-sm link" href="https://tzbtc-v2-backend.prod.gke.papers.tech/privacy-policy/">Privacy Policy</a>
+    </div>
+  </footer>
+
+
+  <script type="text/javascript" src="./tzBTC Bridge_files/global-utils.js"></script>
+
+
+</body><text-blaze-app-reference style="display: contents !important;"><template shadowrootmode="closed"><style>
+      div:before {
+        content: attr(data-content);
+      }
+      div {
+        position: absolute;
+        border: 0;
+        margin: -1px;
+        padding: 0;
+        width: 0.1px;
+        height: 0.1px;
+        user-select: none;
+        overflow: hidden;
+        font-size: 0px;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        pointer-events: none;
+      }
+      @media print {
+        * {
+          display: none !important;
+        }
+      }
+      </style><div aria-label="text-blaze-integration" role="group" tabindex="-1" data-content="{&quot;extensionEnabled&quot;:true}"></div></template></text-blaze-app-reference></html>
